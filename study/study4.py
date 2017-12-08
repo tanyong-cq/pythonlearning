@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+'''
+character and string
+'''
+for i in range(0x00, 0x100):
+    print('0x%02X=[%c]' % (i, chr(i)))
+
+print('%s=0x%2X' % ('0', ord('0')))
+print('%s=0x%2X' % ('A', ord('A')))
+print('%s=0x%2X' % ('a', ord('a')))
+print('%s=0x%2X' % ('中', ord('中')))
+
+print('len(%s)=%d' % ('Abc', len('Abc')))
+print('len(%s)=%d' % ('中文', len('中文')))
+print('len(%s)=%d' % ('abc中文123', len('abc中文123')))
+
+for c in 'abc中文123':
+    print(c)
+
+print('abc中文123'[1:4])
+print('abc中文123'[1:])
+print('abc中文123'[:4])
+print('abc中文123'[1:-2])
+print('abc中文123'[-4:-2])
+print('abc中文123'[1:8:2])
+print('abc中文123'[::3])
+
+print('[%s]' % (' abc中文123 '.strip()))
+print('[%d]' % (' abc中文123abc '.count('abc')))
+print('[%s]' % ('abc中文123ABC '.capitalize()))
+print('[%s]' % (' abc中文123ABC '.casefold()))
+print('[%s]' % (' abc中文123ABC '.center(17, '-')))
+print('[%s]' % (' abc中文123ABC '.encode()))
+print('[%s]' % (' abc中文123ABC '.endswith('ABC ')))
+print('[%s]' % (' abc中\t文123ABC '.expandtabs(tabsize=20)))
+print('[%s]' % (' abc中文123ABC '.find('123')))
+print('[%s]' % ('{1}是{0}人。'.format('小明', '中国')))
+print('[%s]' % ('{}是{}人。'.format('小明', '中国')))
+print('[%s]' % ('{name}是{country}人。'.format(name='小明', country='中国')))
+print('[%s]' % ('{:0>8}'.format(123)))
+print('[%s]' % ('{:0<8}'.format(123)))
+print('[%s]' % ('{:0^8}'.format(123)))
+print('[%s]' % ('{:^8}'.format(123)))
+print('[%s]' % ('{name:>10}是{country:^8}人。'.format(name='小明', country='中国')))
+print('[%s]' % ('{:>8.2f}'.format(123)))
+print('[%s]' % ('{:>b}'.format(123)))
+print('[%s]' % ('{:>d}'.format(123)))
+print('[%s]' % ('{:>o}'.format(123)))
+print('[%s]' % ('{:>x}'.format(123)))
+print('[%s]' % ('{:,}'.format(1234567890)))
+print('[%s]' % ('{name}是{country}人。'.format_map({'name':'小明', 'country':'中国'})))
+print('[%s]' % (' abc中文123ABC '.index('123')))
+print('[%s]' % ('123'.isalnum()))
+print('[%s]' % ('abc'.isalpha()))
+print('[%s]' % ('123'.isdecimal()))
+print('[%s]' % ('123'.isdigit()))
+print('[%s]' % ('name1'.isidentifier()))
+print('[%s]' % ('123a'.isprintable()))
+print('[%s]' % ('123'.join('abc')))
+print('[%s]' % ('abc中文123ABC'.ljust(15)))
+print('[%s]' % (' abc中文123ABC '.lstrip()))
+print('[%s]' % (' abc中文 '.translate(''.maketrans('abc', '123'))))
+print('[%s]' % (' abc中文 '.translate(''.maketrans({'a':'ni', 'b':'ta'}))))
+print('abc中文123ABC'.partition('123'))
+print('[%s]' % (' abc中文123ABC '.replace('123', 'aaa')))
+print('[%s]' % (' abc,中文,123,ABC '.split(',')))
+print('[%s]' % (' abc中文123ABC '.swapcase()))
+print('[%s]' % ('123'.zfill(5)))
